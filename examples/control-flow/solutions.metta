@@ -1,11 +1,11 @@
 ;abs function
-(: (abs -> Number Number))
+(: abs (-> Number Number))
 (= (abs $x)
   if (< $x 0)(* $x -1)($x)
 )
 
 ;factorial function
-(: (factorial -> Number Number))
+(: factorial (-> Number Number))
 (= (factorial $x)
   (case $x
     (0 1)
@@ -14,7 +14,7 @@
 )
 
 ;fibonacci generator
-(: (fibonacci -> Number Number))
+(: fibonacci (-> Number Number))
 (= (fibonacci $x)
   (case $x
     (0 0)
@@ -24,7 +24,7 @@
 )
 
 ;a function to check whether a number is a power of four
-(: (isPowerOfFour -> Number Number))
+(: isPowerOfFour (-> Number Number))
 (= (isPowerOfFour $x)
   (if (== $x 1) True ((if (< $x 1) False (isPowerOfFour (/ $x 4)))))
 )
